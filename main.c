@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define PI 3.141592653589793
+
 struct Circle {
 	int x;
 	int y;
@@ -7,6 +9,7 @@ struct Circle {
 };
 
 Circle define_circle();
+float get_area(Circle circle);
 
 int main() {
 	int size = 3;
@@ -16,13 +19,15 @@ int main() {
 	}
 
 	for (int i = 0; i < size; i++) {
-		printf("%d %d %.2f\n", 
+		printf("circle(%d %d, %.2f)\n", 
 			circles[i].x,
 		       	circles[i].y,
 		       	circles[i].radius
 		);
-        }
+		printf(" area = %.2f\n",get_area(circles[i]));
 
+        }
+	
 
 	return 0;
 }
@@ -40,4 +45,8 @@ Circle define_circle() {
 	circle.radius = radius;
 
 	return circle;
+}
+
+float get_area(Circle circle){
+	return PI*circle.radius*circle.radius;
 }
