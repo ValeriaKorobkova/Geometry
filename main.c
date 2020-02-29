@@ -16,7 +16,9 @@ int is_intersected(Circle circle_1, Circle circle_2);
 
 int main()
 {
-    int size = 3;
+    int size;
+	printf("Circles count: ");
+	scanf("%d",&size);
     Circle circles[size];
     for (int i = 0; i < size; i++) {
         circles[i] = define_circle();
