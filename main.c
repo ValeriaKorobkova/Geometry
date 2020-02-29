@@ -10,6 +10,7 @@ struct Circle {
 
 Circle define_circle();
 float get_area(Circle circle);
+float get_perimeter(Circle circle);
 
 int main()
 {
@@ -25,6 +26,7 @@ int main()
                circles[i].y,
                circles[i].radius);
         printf(" area = %.2f\n", get_area(circles[i]));
+        printf(" perimeter = %.2f\n\n", get_perimeter(circles[i]));
     }
 
     return 0;
@@ -44,6 +46,11 @@ Circle define_circle()
     circle.radius = radius;
 
     return circle;
+}
+
+float get_perimeter(Circle circle)
+{
+    return 2 * PI * circle.radius;
 }
 
 float get_area(Circle circle)
