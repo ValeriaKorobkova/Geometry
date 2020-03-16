@@ -1,7 +1,12 @@
 #include <math.h>
 #include <stdio.h>
+#include <regex> 
+#include <string>
+#include <iostream>
 
 #define PI 3.141592653589793
+
+using namespace std;
 
 struct Circle {
     int x;
@@ -16,6 +21,14 @@ int is_intersected(Circle circle_1, Circle circle_2);
 
 int main()
 {
+//	regex regex("\\s*circle[(][0-9]+\\s+[0-9]+,\\s*[0-9]+[.]?[0-9]*[)]\\s*");
+	regex regex("\\s*circle[(][0-9]+ \\s*[0-9]+");
+	string input;
+	cin >> input;
+	
+	cout << regex_match(input, regex) << endl;	
+	return 0;	
+
     int size;
 	printf("Circles count: ");
 	scanf("%d",&size);

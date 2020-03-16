@@ -1,5 +1,5 @@
-build: main.c
-	g++ -Wall main.c -o geometry
+build: main.cpp
+	g++ -Wall main.cpp -o geometry
 
 format: *.c
-	clang-format -i *.c
+	clang-format -i *.cpp
