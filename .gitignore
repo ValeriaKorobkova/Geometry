@@ -1,3 +1,4 @@
-geometry
+bin/geometry
+bin/test
 *.swp
 *.o
