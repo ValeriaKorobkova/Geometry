@@ -1,4 +1,5 @@
 #include "circle.h"
+#include <stdio.h>
 
 circle_t define_circle()
 {

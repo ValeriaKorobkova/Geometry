@@ -1,4 +1,5 @@
 #include "circle.h"
+#include <math.h>
 #define PI 3.141592653589793
 
 float get_perimeter(circle_t circle)
